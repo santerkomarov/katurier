@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>slider</title>
+		<link rel="stylesheet" href="sources/splide-2.4.21/dist/css/themes/splide-sea-green.min.css">
+	<link rel="icon" 
+      type="image/png" 
+      href="img/favicon.png" />
+   <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/js/splide.min.js"></script>
+</head>
+<style>
+	/*.wrap-for-splide {
+		position: absolute;
+		width: 1000px;
+		left: 400px;
+		
+	}*/
+</style>
+<body>
+	<div class="wrap-for-splide">
+		<div id="splide">
+			<div class="splide__track">
+				<ul class="splide__list">
+					<li class="splide__slide"><img src="img/for-slider1.jpg" alt=""></li>
+					<li class="splide__slide"><img src="img/for-slider2.jpg" alt=""></li>
+					<li class="splide__slide"><img src="img/for-slider3.jpg" alt=""></li>
+				</ul>
+			</div>
+
+			<div class="splide__progress">
+				<div class="splide__progress__bar">	</div>
+			</div>
+		</div>
+
+		
+	</div>
+<script>
+new Splide( '#splide', {
+	type  : 'fade',
+	rewind: true,
+	autoplay: true,
+	pauseOnHover: false,
+} ).mount();
+</script>
+</body>
+</html>

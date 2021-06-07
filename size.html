@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>size-material</title>
+	<link rel="stylesheet" href="style/style.css">
+	<link rel="stylesheet" href="style/normalizer.css">
+</head>
+<style>
+	:root {
+  --border: 2px dashed #393939;
+ 
+}
+	.wrap-container {
+		width: 800px;
+		 
+	}
+	.top-container {
+		width: 100%;
+		height: 80px;
+		background-color: #dadaa4;
+		font-size: 20px;
+		font-weight: 700;
+		padding: 10px 0 0 10px;
+		border: 1px solid #13334c;
+		margin-bottom: 8px;
+	}
+	.top-container p {
+		margin-bottom: 8px;
+	}
+	.container {
+		/*width: 800px;*/
+		display: grid;
+		grid-template-columns: 300px 500px;
+  		grid-template-rows: 60px 400px;
+  		border: 2px dashed #13334c;
+  		/*text-align: center;*/
+
+	}
+	.container > span:first-child {
+		border-right: var(--border);
+  	
+  		/*margin-right: -4px;*/
+  	
+  		
+	}
+	.container span {
+		padding-top: 16px;
+		text-align: center;
+		font-weight: 700;
+	}
+	.razmer {
+		display: grid;
+		grid-template-columns: 1fr;
+  		grid-template-rows: repeat(5, 1fr);
+
+		border-top: var(--border);
+  		border-left: var(--border);
+  		margin-left: -2px;
+  		margin-top: -2px;
+	}
+	.razmer > .wrap-for-size {
+		display: grid;
+		grid-template-columns: 1fr 1fr 1fr;
+  		grid-template-rows: 1fr;
+	}
+	.tkan {
+		
+
+		margin: 6px;
+		border-top: var(--border);
+  		border-left: var(--border);
+  		margin-bottom: 2px;
+  		margin-left: -2px;
+  		margin-top: -2px;
+  		padding: 2px;
+
+	}
+	.wrap-for-content-tkan {
+		width: 100%;
+		height: 100%;
+		display: flex;
+		flex-wrap: wrap;
+		overflow: auto;
+	}
+	.material-image {
+		position: relative;
+		margin: 0 auto;
+	}
+	.material-image img {
+		margin: 10px auto;
+	}
+	.material-chosen {
+		position: absolute;
+		top: 30%;
+		left: 30%;
+	}
+	.material-info {
+		position: absolute;
+		bottom: 5px;
+		right: 5px;
+	}
+</style>
+<body>
+	<section id="item-card">
+	<div class="catalog-h2">
+		<p>Оформление заказа</p>
+	</div>
+
+
+
+	<div class="wrap-item-card">
+		<div class="card">
+			<div class="wrap-for-image-card">
+				<img src="sources/img/woman3.jpg" width="400" height="500" alt="">
+			</div>
+			
+			<div class="wrap-container">
+
+				<div class="top-container">
+					<p class="title-description-card" >Бафф в ассортименте</p>
+					<p class="price">400 руб.</p>
+				</div>
+					
+				<div class="container">
+					<span>размер</span>
+					<span>выберите материал</span>
+					<div class="razmer">
+						
+						<div class="wrap-for-size">
+							<p class="fixed-size">S</p>
+							<p class="fixed-size">M</p>
+							<p class="fixed-size">L</p>
+						</div>
+						<p id="size-table">таблица размеров</p>
+						<div class="write-your-size">
+							укажите свои размеры
+						</div>
+						<!-- <p>количество</p> -->
+						<div class="wrap-quantity">
+
+							<div class="number" data-step="1" data-min="1" data-max="100">
+								<input class="number-text" type="text" name="count" value="1">
+								<a href="#" class="number-minus">−</a>
+								<a href="#" class="number-plus">+</a>
+							</div>
+						</div>
+						<button id="to-contact-data" >далее</button>
+						<!-- <div class="to-order"><a href="order.html">далее</a></div> -->
+
+					</div>
+					
+					<div class="tkan">
+						<div class="wrap-for-content-tkan">
+										
+							<div class="material-image">
+								
+								<img src="img/material1.jpg" alt="">
+								<div class="material-chosen">
+									<img src="img/check2.png" alt="">
+								</div>
+								<div class="material-info simple-tooltip">
+									<img src="img/info.png" alt=""  >
+								</div>
+							</div>
+							<div class="material-image">
+								<img src="img/material2.jpg" alt="">
+								<div class="material-chosen"><img src="img/check2.png" alt=""></div>
+								<div class="material-info second-tooltip" >
+									<img src="img/info.png" alt="">
+								</div>
+							</div>
+							<div class="material-image">
+								<img src="img/material3.jpg" alt="">
+								<div class="material-chosen"><img src="img/check2.png" alt=""></div>
+								<div class="material-info simple-tooltip">
+									<img src="img/info.png" alt="">
+								</div>
+							</div>
+							<div class="material-image">
+								<img src="img/denim.jpg" alt="">
+								<div class="material-chosen"><img src="img/check2.png" alt=""></div>
+								<div class="material-info second-tooltip">
+									<img src="img/info.png" alt="">
+								</div>
+							</div>
+							<div class="material-image">
+								<img src="img/material4.jpg" alt="">
+								<div class="material-chosen"><img src="img/check2.png" alt=""></div>
+								<div class="material-info simple-tooltip">
+									<img src="img/info.png" alt="">
+								</div>
+							</div>
+						</div>
+					</div>
+	
+				</div> <!-- end of wrap-size-material -->
+				<!-- <button id="to-contact-data">далее</button> -->
+			</div>	
+		</div>
+	</div>	
+</section>
+</body>
+</html>

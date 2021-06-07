@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>order</title>
+	<link rel="stylesheet" href="style/style.css">
+	<link rel="stylesheet" href="style/normalizer.css">
+	<link rel="stylesheet" href="sources/splide-2.4.21/dist/css/themes/splide-sea-green.min.css">
+	<link rel="icon" type="image/png" href="img/bobbin.ico" />
+ <!-- 	<link rel="stylesheet" href="//gitcdn.link/repo/wintercounter/Protip/master/protip.min.css"> -->
+ 	<!-- <link rel="stylesheet" href="style/tooltip.css"> -->
+  <!--  <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/js/splide.min.js"></script> -->
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+
+  <!--  <script type="text/javascript" src="sources/tipped-4.7.0/dist/js/tipped.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="sources/tipped-4.7.0/dist/css/tipped.css"/> -->
+
+
+	<!-- <script src="https://www.google.com/recaptcha/api.js" async defer></script> -->
+</head>
+<body>
+<nav>
+	<div class="bottom-dashed-border">
+		<div class="nav-wrap">
+			<div class="wrap-logo">
+				<div class="logo-image">
+					<a href="index.html"><img src="img/logo.png" width="138" height="100" alt="logo"></a>
+				</div>
+				<div class="logo-slogan">
+					<p>KATURIER</p>
+					<span>Пошив изделий на заказ</span>
+				</div>
+			</div>
+			<div class="wrap-nav-phone">
+				<div class="nav-phone">
+					<img src="img/viber_orange_small.png" width="40" height="40" alt="viber">&nbsp;<span>katurier</span> 
+					<img src="img/email_orange_small.png" width="38" height="30" alt="email">&nbsp;<span>katurier@mail.ru</span></div>
+				<div class="nav-ul-li">
+					<ul>
+						<li><a href="assortiment.html">взрослым</a></li>
+						<li>детям</li>
+						<li>фэмили лук</li>
+						<li>вышивка</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+</nav>
+
+<!-- === chosen ORDER === -->
+<section id="order-page">
+	<div class="catalog-h2">
+		<p>Ваш заказ</p>
+	</div>
+
+	<div class="wrap-order">
+		<div class="order">
+			<div class="wrap-for-order-image">
+				<img src="img/catalog/woman10-0.jpg" width="440" height="550" alt="">
+			</div>
+			<div class="wrap-for-order-content">
+				<div class="order-content-title">
+				<!-- 	<p>Вы выбрали:</p> -->
+					<p>Лонгслив</p>
+					<p>1100 руб.</p>
+
+				</div>
+				<div class="wrap-order-content-middle">
+					<div class="order-content-middle">
+						<div class="size-table">
+							
+							<div class="size-cell">
+								<p>Рост:</p>
+								<p>175 см</p>	
+							</div>
+							<div class="size-cell">
+								<p>Обхват груди:</p>
+								<p>90 см</p>
+							</div>
+							<div class="size-cell">
+								<p>Обхват талии:</p>
+								<p>82 см</p>
+							</div>
+							<div class="size-cell">
+								<p>Обхват бёдер:</p>
+								<p>93 см</p>
+							</div>
+							<div class="size-cell">
+								<p>Длина рукава:</p>
+								<p>54</p>	
+							</div>	
+							<div class="size-cell">
+								<p>Количество:</p>
+								<p>2 шт</p>
+							</div>
+						</div>		
+						<!-- <p class="quantity">Количество:</p> -->
+						<div class="order-content-middle__material">
+							<p>Ткань</p>	
+							<img src="img/material1.jpg" alt="">
+						</div>
+					</div>
+					<div class="order-content-middle__buttons">
+						<div class="summa">
+							<p>Сумма:</p>
+							<p>800 руб.</p>
+						</div>
+						<button class="add-contacts" id="add-contacts">добавить контактные данные</button>
+						<button class="send-order" id="send-order">отправить заказ</button>
+
+						<div class="message-order-was-sent">
+								<p>Спасибо. Ваш заказ принят.</p>
+                     	<p>Мы свяжемся с Вами</p> 
+ 								<p>в самое ближайшее время.</p>
+								<p id="go-to-catalog"><a href="assortiment.html">вернуться в каталог</a></p>
+							</div>
+							
+ 							<!-- <p>закрыть</p>	 -->			
+						</div>
+						<!-- <button class="button-send-order button-send-order__disabled">Отправить заказ</button> -->
+					</div>
+				</div>	
+			</div>
+		</div>
+		<!-- <div class="send-order">
+			<button class="button-send-order button-send-order__disabled">Отправить заказ</button>
+		</div> -->
+	
+</section>
+
+
+<!-- === form person contacts === -->
+<!-- === form person contacts === -->
+<section id="personal-contacts">
+	<div class="wrap-for-form">
+		<div class="close-form">X</div>
+		<p>Заполните поля формы чтобы мы смогли связаться с вами</p>
+		<form class="form-user-data">
+			<div class="wrap-form-inside">
+				<label for="user_name">Имя</label>
+				<input class="input-personal" type="text" name="user_name" placeholder="Имя" autocomplete="off">
+	
+				<label for="user_phone">Телефон</label>
+				<input class="input-personal" type="text" name="user_phone" placeholder="Телефон" autocomplete="off">
+	
+				<label for="user_email">Email</label>
+				<input class="input-personal" type="text" name="user_email" placeholder="Email" autocomplete="off">
+	
+				<label for="user_text">Сообщение</label>
+				<textarea  class="textarea" type="text" name="user_text" placeholder="Ваш комментарий"></textarea>
+					
+      		<!-- <div class="g-recaptcha" data-sitekey="your_site_key"></div> -->
+      		<!-- <input type="radio">
+      		<p>Даю согласие на обработку персональных данных</p> -->
+      		<div class="agree">
+					<input id="radio" type="checkbox" name="radio" value="1" class="wrong">
+					<label for="radio">Даю согласие на обработку <br>персональных данных</label>
+				</div>
+      				
+				<button id="submit-personal-contacts" class="form-user-button" type="button" value="">далее</button>
+
+			</div>
+		</form>
+	</div>
+</section>
+<!-- === scheme of work === -->
+
+<!-- <footer>
+	<div class="footer-wrap">
+		<div class="footer-left">
+			<div class="footer-left-container">
+				<p>KATURJER</p>
+				<img src="img/logo.png" width="111" height="80" alt="logo">
+				<span>Пошив одежды на заказ</span>		
+			</div>
+			
+		</div>
+		<div class="footer-middle">
+			<ul>Покупателям
+				<li>Оплата</li>
+				<li>Доставка</li>
+				<li>Скидки и акции</li> 
+				<li>Подарочные сертификаты</li>
+				<li></li>
+			</ul>
+		</div>
+		<div class="footer-right">
+			<ul>Информация
+				<li>О нас</li>
+				<li>Контакты</li>
+				<li>Обратная связь</li> 
+				<li>Оптовикам</li> 	
+			</ul>
+			<p><span>Created by BERGAN</span></p>
+		</div>
+
+	</div>
+</footer> -->
+<footer>
+	<div class="footer-wrap">
+		<div class="footer-left">
+			<div class="footer-left-container">
+				<p>KATURIER</p>
+				<img src="img/logo.png" width="111" height="80" alt="logo">
+				<span>Пошив изделий на заказ</span>		
+			</div>	
+		</div>
+		<div class="footer-middle">
+			<ul>
+				<li><img src="img/clock.png" width="50" height="50" alt=""></li>
+				<li>Пн - Пт</li>
+				<li>9 - 18</li>
+			</ul>
+		</div>
+		<div class="footer-right">
+			<ul>
+				<li><img src="img/email2.png" width="50" height="40" alt=""></li>
+				<li>katurier@mail.ru</li>
+			</ul>	
+		</div>
+	</div>
+	<p id="created"><span>Created by BERGAN</span></p>
+</footer>
+
+
+<!-- ============================================== -->
+
+<script src="counter-items.js"></script>	
+
+<script>
+
+
+// === choosing sizes from S to X ===	
+$(".fixed-size").click (function () {
+	// $(".fixed-size").css({"background-color":"#f6f6e9", "color":"#13334c"});
+ //  	$(this).css({"background-color":"#005792", "color":"#f6f6e9"});
+  	// $(this).css("color","#f6f6e9");
+
+$(".fixed-size").removeClass('fixed-size-hover');
+$(this).addClass('fixed-size-hover');
+
+
+});
+
+// === show modal window with form personal contacts ===
+var $body = $(document.body);
+$( "#add-contacts" ).click(function() {
+  // $("#personal-contacts").show();
+  $("#personal-contacts").css("top","0");
+
+// freez body scroll under MODAL window
+var oldWidth = $body.innerWidth();
+$body.css("overflow", "hidden");
+$body.width(oldWidth);
+
+
+// $('#personal-contacts').on('shown', function(){
+//     $body.css('overflow', 'hidden');
+// }).on('hidden', function(){
+//     $body.css('overflow', 'auto');
+// })
+
+
+});
+
+// ===============================================
+
+// free scroll-Y after MODAL go up with DELAY to avoid twitching 4px to left side 
+ function avoidTwitching() {
+ 	var $body = $(document.body);
+	$body.css("overflow", "auto");
+	$body.width("auto");
+ }
+
+ // add active CLASS to button 'send order'
+ // after MODAl disapear
+function addActive() {
+   	 $("#send-order").addClass("send-order-active");
+   }
+ // after message was sent make button disabled
+function removeActive() {
+	 $("#send-order").removeClass("send-order-active");
+}
+// ===============================================
+
+// === show red border in form if input empty ===
+$( "#submit-personal-contacts" ).click(function() {
+   $("#personal-contacts").css("top","-200%");
+   // activate button "SEND ORDER" 
+   // $(".button-send-order").removeClass('button-send-order__disabled');
+   // $(".send-order-disable").css("display","none");
+  
+
+   
+	setTimeout(avoidTwitching, 300); 
+	setTimeout(addActive, 500) ;
+ 	
+ 	
+
+
+
+});
+
+// after click button "SEND ORDER"
+$("#send-order").click(function() {
+	// var checkDisabledClass = $(".button-send-order").hasClass("button-send-order__disabled");
+	// console.log(checkDisabledClass + " button has \"button-send-order__disabled\" class");
+	// if (!checkDisabledClass) {
+	// 	console.log("click works");	
+	// } else {
+	// 	console.log("click NOT works");	
+	// }
+	
+
+	var checkDisabledClass = $(".send-order").hasClass("send-order-active");
+	// console.log(checkDisabledClass + " button has \"send-order-active\" class");
+	if (!checkDisabledClass) {
+		console.log("click NOT works, because button HAS NOT active class ");
+		// console.log("click works, button HAS active class");	
+	} else {
+		$('.message-order-was-sent').css("top","5px");
+		$('.message-order-was-sent').css("opacity","1");
+		setTimeout(removeActive, 700);
+		console.log("click works, button HAS active class");
+			
+	}
+
+	
+
+
+})
+// === close FORM ===
+$(".close-form").click (function () {
+ 	 $("#personal-contacts").css("top","-200%");
+ 	 $(".send-order").removeClass("send-order-active");
+ 	 // $(".send-order-disable").css("display","block");
+
+
+ 	 // free scroll Y after closing modal
+ 	
+ 	setTimeout(avoidTwitching, 300);  
+ 	
+});
+ // === show "выбрано" material ===
+$(".material-chosen").click (function () {
+ 	$('.material-chosen').css("opacity","0");
+  	$(this).css("opacity","1");
+});
+
+// hide the body overflow and it makes body not scrolling
+
+// var $body = $(document.body);
+// $('#personal-contacts').on('shown', function(){
+//     $body.css('overflow', 'hidden');
+// }).on('hidden', function(){
+//     $body.css('overflow', 'auto');
+// })
+	
+</script>
+</body>
+</html>
+
+
+

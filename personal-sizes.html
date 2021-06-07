@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>personal-sizes</title>
+	<link rel="stylesheet" href="style/style.css">
+</head>
+<body>
+<section id="personal-sizes">
+	<div class="wrap-personal-sizes">
+		<!-- <div class="boy-image"> -->
+			<form action="#" class="form-personal-sizes">
+				<input  oninput="maxLengthCheck(this)" maxlength = "3" min = "2" max = "999" type="number" autocomplete="off" maxlength="3" id="height" placeholder="см">
+				<input  oninput="maxLengthCheck(this)" maxlength = "3" min = "2" max = "999" type="number"  maxlength="3" id="shoulders" placeholder="см">
+				<input  oninput="maxLengthCheck(this)" maxlength = "3" min = "2" max = "999" type="number"  maxlength="3" id="neck" placeholder="см">
+				<input  oninput="maxLengthCheck(this)" maxlength = "3" min = "2" max = "999" type="number"  maxlength="3" id="sleeve" placeholder="см">
+				<input  oninput="maxLengthCheck(this)" maxlength = "3" min = "2" max = "999" type="number"  maxlength="3" id="chest" placeholder="см">
+				<input  oninput="maxLengthCheck(this)" maxlength = "3" min = "2" max = "999" type="number"  maxlength="3" id="waist" placeholder="см">
+				<input  oninput="maxLengthCheck(this)" maxlength = "3" min = "2" max = "999" type="number"  maxlength="3" id="hips" placeholder="см">
+				<button id="size-button" class="form-user-button">далее</button>
+				
+			</form>
+		<!-- </div> -->
+	</div>
+</section>	
+</body>
+</html>
+
+<script>
+	function maxLengthCheck(object) {
+    if (object.value.length > object.maxLength)
+      object.value = object.value.slice(0, object.maxLength)
+  }
+</script>
