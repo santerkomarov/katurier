@@ -6,18 +6,10 @@
 	<title>order</title>
 	<link rel="stylesheet" href="style/style.css">
 	<link rel="stylesheet" href="style/normalizer.css">
-	<link rel="stylesheet" href="sources/splide-2.4.21/dist/css/themes/splide-sea-green.min.css">
+	<link rel="stylesheet" href="style/splide-sea-green.min.css">
 	<link rel="icon" type="image/png" href="img/bobbin.ico" />
- <!-- 	<link rel="stylesheet" href="//gitcdn.link/repo/wintercounter/Protip/master/protip.min.css"> -->
- 	<!-- <link rel="stylesheet" href="style/tooltip.css"> -->
-  <!--  <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/js/splide.min.js"></script> -->
    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
 
-  <!--  <script type="text/javascript" src="sources/tipped-4.7.0/dist/js/tipped.min.js"></script>
-	<link rel="stylesheet" type="text/css" href="sources/tipped-4.7.0/dist/css/tipped.css"/> -->
-
-
-	<!-- <script src="https://www.google.com/recaptcha/api.js" async defer></script> -->
 </head>
 <body>
 <nav>
@@ -62,7 +54,6 @@
 			</div>
 			<div class="wrap-for-order-content">
 				<div class="order-content-title">
-				<!-- 	<p>Вы выбрали:</p> -->
 					<p>Лонгслив</p>
 					<p>1100 руб.</p>
 
@@ -96,7 +87,7 @@
 								<p>2 шт</p>
 							</div>
 						</div>		
-						<!-- <p class="quantity">Количество:</p> -->
+			
 						<div class="order-content-middle__material">
 							<p>Ткань</p>	
 							<img src="img/material1.jpg" alt="">
@@ -116,22 +107,17 @@
  								<p>в самое ближайшее время.</p>
 								<p id="go-to-catalog"><a href="assortiment.html">вернуться в каталог</a></p>
 							</div>
-							
- 							<!-- <p>закрыть</p>	 -->			
+ 										
 						</div>
-						<!-- <button class="button-send-order button-send-order__disabled">Отправить заказ</button> -->
+					 
 					</div>
 				</div>	
 			</div>
 		</div>
-		<!-- <div class="send-order">
-			<button class="button-send-order button-send-order__disabled">Отправить заказ</button>
-		</div> -->
+		
 	
 </section>
 
-
-<!-- === form person contacts === -->
 <!-- === form person contacts === -->
 <section id="personal-contacts">
 	<div class="wrap-for-form">
@@ -151,9 +137,6 @@
 				<label for="user_text">Сообщение</label>
 				<textarea  class="textarea" type="text" name="user_text" placeholder="Ваш комментарий"></textarea>
 					
-      		<!-- <div class="g-recaptcha" data-sitekey="your_site_key"></div> -->
-      		<!-- <input type="radio">
-      		<p>Даю согласие на обработку персональных данных</p> -->
       		<div class="agree">
 					<input id="radio" type="checkbox" name="radio" value="1" class="wrong">
 					<label for="radio">Даю согласие на обработку <br>персональных данных</label>
@@ -165,39 +148,7 @@
 		</form>
 	</div>
 </section>
-<!-- === scheme of work === -->
 
-<!-- <footer>
-	<div class="footer-wrap">
-		<div class="footer-left">
-			<div class="footer-left-container">
-				<p>KATURJER</p>
-				<img src="img/logo.png" width="111" height="80" alt="logo">
-				<span>Пошив одежды на заказ</span>		
-			</div>
-			
-		</div>
-		<div class="footer-middle">
-			<ul>Покупателям
-				<li>Оплата</li>
-				<li>Доставка</li>
-				<li>Скидки и акции</li> 
-				<li>Подарочные сертификаты</li>
-				<li></li>
-			</ul>
-		</div>
-		<div class="footer-right">
-			<ul>Информация
-				<li>О нас</li>
-				<li>Контакты</li>
-				<li>Обратная связь</li> 
-				<li>Оптовикам</li> 	
-			</ul>
-			<p><span>Created by BERGAN</span></p>
-		</div>
-
-	</div>
-</footer> -->
 <footer>
 	<div class="footer-wrap">
 		<div class="footer-left">
@@ -231,16 +182,11 @@
 
 <script>
 
-
 // === choosing sizes from S to X ===	
 $(".fixed-size").click (function () {
-	// $(".fixed-size").css({"background-color":"#f6f6e9", "color":"#13334c"});
- //  	$(this).css({"background-color":"#005792", "color":"#f6f6e9"});
-  	// $(this).css("color","#f6f6e9");
 
 $(".fixed-size").removeClass('fixed-size-hover');
 $(this).addClass('fixed-size-hover');
-
 
 });
 
@@ -254,14 +200,6 @@ $( "#add-contacts" ).click(function() {
 var oldWidth = $body.innerWidth();
 $body.css("overflow", "hidden");
 $body.width(oldWidth);
-
-
-// $('#personal-contacts').on('shown', function(){
-//     $body.css('overflow', 'hidden');
-// }).on('hidden', function(){
-//     $body.css('overflow', 'auto');
-// })
-
 
 });
 
@@ -289,54 +227,30 @@ function removeActive() {
 $( "#submit-personal-contacts" ).click(function() {
    $("#personal-contacts").css("top","-200%");
    // activate button "SEND ORDER" 
-   // $(".button-send-order").removeClass('button-send-order__disabled');
-   // $(".send-order-disable").css("display","none");
   
-
-   
 	setTimeout(avoidTwitching, 300); 
 	setTimeout(addActive, 500) ;
  	
- 	
-
-
-
 });
 
 // after click button "SEND ORDER"
 $("#send-order").click(function() {
-	// var checkDisabledClass = $(".button-send-order").hasClass("button-send-order__disabled");
-	// console.log(checkDisabledClass + " button has \"button-send-order__disabled\" class");
-	// if (!checkDisabledClass) {
-	// 	console.log("click works");	
-	// } else {
-	// 	console.log("click NOT works");	
-	// }
 	
 
 	var checkDisabledClass = $(".send-order").hasClass("send-order-active");
-	// console.log(checkDisabledClass + " button has \"send-order-active\" class");
+
 	if (!checkDisabledClass) {
-		console.log("click NOT works, because button HAS NOT active class ");
-		// console.log("click works, button HAS active class");	
+		
 	} else {
 		$('.message-order-was-sent').css("top","5px");
 		$('.message-order-was-sent').css("opacity","1");
-		setTimeout(removeActive, 700);
-		console.log("click works, button HAS active class");
-			
+		setTimeout(removeActive, 700);	
 	}
-
-	
-
-
 })
 // === close FORM ===
 $(".close-form").click (function () {
  	 $("#personal-contacts").css("top","-200%");
  	 $(".send-order").removeClass("send-order-active");
- 	 // $(".send-order-disable").css("display","block");
-
 
  	 // free scroll Y after closing modal
  	
@@ -349,14 +263,6 @@ $(".material-chosen").click (function () {
   	$(this).css("opacity","1");
 });
 
-// hide the body overflow and it makes body not scrolling
-
-// var $body = $(document.body);
-// $('#personal-contacts').on('shown', function(){
-//     $body.css('overflow', 'hidden');
-// }).on('hidden', function(){
-//     $body.css('overflow', 'auto');
-// })
 	
 </script>
 </body>
